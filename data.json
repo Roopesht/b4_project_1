@@ -1,0 +1,33 @@
+{
+  "contacts": [
+    {
+      "name": "Ramesh",
+      "tags": [
+        "Student",
+        "BTech"
+      ]
+    },
+    {
+      "name": "Roshini",
+      "tags": [
+        "Software Engineer",
+        "Highly ambitious"
+      ]
+    }
+  ],
+  "conversations": {
+    "Ramesh": [
+      {
+        "datetime": "2025-08-01 10:00:00",
+        "sender": "Ramesh",
+        "text": "Hi Roopesh, I want to know more on GenAI"
+      },
+      {
+        "datetime": "2025-08-01 10:00:00",
+        "sender": "me",
+        "text": "Hi Ramesh, I will send you the brochure"
+      }
+
+    ]
+  }
+}
