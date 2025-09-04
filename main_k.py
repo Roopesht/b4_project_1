@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import requests
 import json
 
 #Load env file
@@ -14,13 +15,13 @@ API_KEY = os.getenv("API_KEY")
 with open("JSON_FILE", "r") as f:
     data = json.load(f)
 
-# Function to display all contacts
+#show contacts
 def show_contacts():
     print("\n--- Contacts ---")
     for contact in data["contacts"]:
         print(f"Name: {contact['name']}, Tags: {', '.join(contact['tags'])}")
 
-# Function to show conversation with a contact
+#show conv
 def show_conversation(contact_name):
     conversations = data["conversations"].get(contact_name, [])
     if not conversations:
@@ -31,7 +32,7 @@ def show_conversation(contact_name):
     for msg in conversations:
         print(f"[{msg['datetime']}] {msg['sender']}: {msg['text']}")
 
-# Function to add a new message
+#add conv
 def add_message(contact_name, sender, text):
     from datetime import datetime
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
